@@ -1,0 +1,24 @@
+<h3>Listado</h3>
+
+<ul class="list-group">
+    <li *ngFor="
+        let character of characterList; 
+        let i = index; 
+        let isLast = last
+        let isEven = even"
+
+        class="list-group-item"
+        [ngClass]="{
+            'list-group-item-dark': isLast,
+            'list-group-item-primary': isEven
+        }">
+
+        <span class="text-primary">{{ i + 1 }}. </span>
+
+        <span>{{character.name}} - </span>
+
+        <strong>power: </strong>
+
+        <span>{{ character.power }}</span>
+    </li>
+</ul>
