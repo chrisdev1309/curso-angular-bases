@@ -3,10 +3,15 @@
 
 <div class="row">
     <div class="col">
-        <bdz-list [characterList]="character"></bdz-list>
+        <bdz-list 
+            [characterList]="characters"
+            (onDelete)="deleteCharacterById($event)">
+        </bdz-list>
     </div>
 
     <div class="col">
-        <dbz-add-character></dbz-add-character>
+        <dbz-add-character 
+            (onNewCharacter)="onNewCharacter($event)">
+        </dbz-add-character>
     </div>
 </div>
